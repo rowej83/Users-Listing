@@ -2,6 +2,7 @@ import { User } from "./UserClass.js";
 
 export const getArrayOfUsers = () => {
   let Users = JSON.parse(localStorage.getItem("Users"));
+  if(Users==null){return [];}
   let returnArray = [];
   if (Users.length > 0) {
     Users.forEach(theUser => {
